@@ -1,0 +1,11 @@
+.cnLayout {
+  &__root {
+    min-height: 100vh;
+    background-color: #fafafa;
+  }
+
+  &__body {
+    max-width: 1080px;
+    margin: auto;
+  }
+}

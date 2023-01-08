@@ -1,0 +1,27 @@
+.badge {
+  display: flex;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__userPlaceholder {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #c8c3c3;
+  }
+
+  &__nickName {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+  }
+}
