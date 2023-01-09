@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
 import UserBadge from '../UserBadge/UserBadge'
 import Comment from '../Comment/Comment'
+import cn from 'classnames'
 
 import './style.scss'
 
-const DetailCard = ({ userName, avatarUrl, userId, imgUrl, likes, isLikeByYou, comments }) => {
+const DetailCard = ({
+  userName,
+  avatarUrl,
+  userId,
+  imgUrl,
+  likes,
+  isLikeByYou,
+  comments,
+  className,
+}) => {
   const [isCommentsShow, setIsCommentsShow] = useState(false)
 
   const renderComments = () => {
@@ -29,7 +39,7 @@ const DetailCard = ({ userName, avatarUrl, userId, imgUrl, likes, isLikeByYou, c
   }
 
   return (
-    <div className="datailCard">
+    <div className={cn('datailCard', className)}>
       <div className="datailCard__header">
         <UserBadge nickName={userName} avatarUrl={avatarUrl} id={userId} />
       </div>
