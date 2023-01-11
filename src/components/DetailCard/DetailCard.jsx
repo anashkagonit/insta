@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import UserBadge from '../UserBadge/UserBadge'
 import Comment from '../Comment/Comment'
 import cn from 'classnames'
+import { nanoid } from 'nanoid'
 
 import './style.scss'
 
@@ -29,13 +30,13 @@ const DetailCard = ({
             onClick={() => setIsCommentsShow(true)}>{`Показать еще ${
             comments.length - commentsForRender.length
           } комментариев`}</span>
-          {commentsForRender.map((comment, id) => (
-            <Comment {...comment} key={id} />
+          {commentsForRender.map((comment) => (
+            <Comment {...comment} key={nanoid()} />
           ))}
         </>
       )
     }
-    return comments.map((comment, id) => <Comment {...comment} key={id} />)
+    return comments.map((comment) => <Comment {...comment} key={nanoid()} />)
   }
 
   return (
